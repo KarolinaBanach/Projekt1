@@ -56,6 +56,15 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        
+framework:
+        translator: { fallbacks: ["%locale%"] }
+        
+sonata_block:
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]        
 
 # Swiftmailer Configuration
 swiftmailer:
